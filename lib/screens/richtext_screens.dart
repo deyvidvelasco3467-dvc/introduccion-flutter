@@ -41,4 +41,5 @@ class RichTextWidget extends StatelessWidget {
       ),
     );
   }
-}
+}   
+
