@@ -9,9 +9,8 @@ class MiAplicacion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
+      body: Scaffold(
         appBar: AppBar(
           title: const Text('Práctica 01 - Widget Text'),
           centerTitle: true,

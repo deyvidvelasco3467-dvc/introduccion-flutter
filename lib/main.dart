@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_android/screens/botones_screens.dart';
+// archibo de barril
+
+import 'package:flutter_android/screens/index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +14,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: Scaffold(body: Center(child: BotonesScreens())),
+      title: 'Flutter 001',
+      initialRoute: '/stateful',
+      routes: {
+        '/': (context) => const WidgetText(),
+        '/botones': (context) => const BotonesScreens(),
+        '/row': (context) => const RowWidget(),
+        '/prac1': (context) => const MiAplicacion(),
+        '/stateful': (context) => const CounterScreen(),
+      },
     );
   }
 }

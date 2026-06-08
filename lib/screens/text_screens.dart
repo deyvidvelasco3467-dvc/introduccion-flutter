@@ -1,18 +1,30 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+class WidgetText extends StatelessWidget {
+  const WidgetText({super.key});
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      home: Scaffold(body: Center(child: Text('Hello World!!!'))),
+    return Scaffold(
+      body: Center(
+        child: Text(
+          'Este es mi primer Widget, en otra clase llamada: Widget',
+          style: TextStyle(
+            color: const Color.fromARGB(255, 122, 158, 39),
+            fontSize: 30,
+            fontWeight: FontWeight.normal,
+            fontStyle: FontStyle.italic,
+            decoration: TextDecoration.overline,
+          ),
+          textAlign: TextAlign.start,
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/row');
+        },
+        child: Icon(Icons.arrow_drop_down_outlined),
+      ),
     );
   }
 }
